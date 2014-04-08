@@ -1,0 +1,21 @@
+{
+    "name": "jafar/xpax",
+    "require": {
+        "xinix-technology/bono": "dev-master",
+        "xinix-technology/norm": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ganesha",
+            "email": "reekoheek@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Xinix\\Pax": "src/",
+            "Bono": "/home/jafar/workspaces/php/lib/bono/src/",
+            "Norm": "/home/jafar/workspaces/php/lib/norm/src/"
+        }
+    }
+}
