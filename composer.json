@@ -13,9 +13,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Xinix\\Pax": "src/",
-            "Bono": "/home/jafar/workspaces/php/lib/bono/src/",
-            "Norm": "/home/jafar/workspaces/php/lib/norm/src/"
+            "Xinix\\Pax": "src/"
         }
     }
 }
