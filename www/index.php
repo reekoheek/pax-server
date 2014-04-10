@@ -44,8 +44,34 @@ $app = new \Bono\App(
 );
 
 $app->get(
-    '/', function () use ($app) {
-        echo 'Hello world!';
+    '/',
+    function () use ($app) {
+?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+
+    <style type="text/css">
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url(http://upload.wikimedia.org/wikipedia/commons/7/7d/Mars_atmosphere.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+
+<?php
     }
 );
 
