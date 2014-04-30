@@ -69,8 +69,8 @@ return array(
         '\\Bono\\Middleware\\SessionMiddleware',
         '\\Bono\\Middleware\\NotificationMiddleware',
     ),
-    // 'bono.theme' => array(
-    //     'class' => '\\ROH\\Theme\\V2Theme',
-    //     'overwrite' => true,
-    // ),
+    'bono.theme' => array(
+        'class' => '\\Xinix\\Theme\\NakedTheme',
+        'overwrite' => true,
+    ),
 );
