@@ -8,26 +8,24 @@ class AppProvider extends \Bono\Provider\Provider
     {
         $app = $this->app;
 
-        $app->filter(
-            'auth.authorize',
-            function ($allowed) use ($app) {
-                if (is_null($allowed)) {
-                    if ($app->request->isGet()) {
-                        if ($app->request->getSegments(1) == 'package') {
-                            return true;
-                        }
-                    }
-                }
-                return $allowed;
+        $app->filter('auth.authorize', function ($options) use ($app) {
+            if (is_bool($options)) {
+                return $options;
             }
-        );
 
-        $app->get(
-            '/',
-            function () use ($app) {
-                $app->response->template('home');
+            if ($app->request->isGet()) {
+                $uri = is_array($options) ? $options['uri'] : $options;
+                $segments = explode('/', $uri);
+                if (!empty($segments[1]) && $segments[1] == 'package') {
+                    return true;
+                }
             }
-        );
+            return $options;
+        });
+
+        $app->get('/', function () use ($app) {
+            $app->response->template('home');
+        });
 
     }
 }

@@ -66,8 +66,8 @@ return array(
             'redirectUri' => \Bono\Helper\URL::site('/login'),
             'scope' => 'user',
         ),
-        '\\Bono\\Middleware\\SessionMiddleware',
         '\\Bono\\Middleware\\NotificationMiddleware',
+        '\\Bono\\Middleware\\SessionMiddleware',
     ),
     'bono.theme' => array(
         'class' => '\\Xinix\\Theme\\NakedTheme',
